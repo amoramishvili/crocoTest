@@ -1,6 +1,6 @@
 <template>
-  <addButton @click="showModal = true" v-if="!showModal" title="სლაიდერის დამატება" />
-  <modal title="სლაიდერის დამატება" icon="plus2" v-if="showModal" @onClose="showModal = false">
+  <addButton @click="showModal = true" v-if="!showModal" title="სლაიდერის დამატება" class="add-button" />
+  <modal title="სლაიდერის დამატება" icon="plus2" v-if="showModal" @onClose="showModal = false" class="add-modal">
     <Form class="grid gap-4" @submit="onSubmit" enctype="multipart/form-data">
       <textInput name="name" placeholder="სათაური (ქართ)" :rules="{ required: true }" />
       <textInput name="name_eng" placeholder="სათაური (ინგლ)" :rules="{ required: true }" />

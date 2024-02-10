@@ -1,10 +1,10 @@
 <template>
-  <pageHeader @onSearch="sliderStore.setSliderItems" />
-  <sliderAddItem v-if="!updateModalShow" />
-  <sliderEditItem :item="updateModalItem" @onClose="updateModalShow = false" v-if="updateModalShow" />
+  <pageHeader @onSearch="sliderStore.setSliderItems"></pageHeader>
+  <sliderAddItem v-if="!updateModalShow"></sliderAddItem>
+  <sliderEditItem :item="updateModalItem" @onClose="updateModalShow = false" v-if="updateModalShow"></sliderEditItem>/
   <div class="bg-gray-1 rounded-md p-4 mt-8 2xl:p-8" v-if="!!sliderStore.getSliderItems.length">
     <template v-for="(item, i) in sliderStore.getSliderItems" :key="i">
-      <sliderItem :item="item" @onDelete="sliderStore.deleteSliderItem" @onUpdate="UpdateModal" />
+      <sliderItem :item="item" @onDelete="sliderStore.deleteSliderItem" @onUpdate="UpdateModal"></sliderItem>
     </template>
   </div>
 </template>

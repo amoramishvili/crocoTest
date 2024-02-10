@@ -12,7 +12,7 @@ import VeeValidate from '../src/validators/index';
 
 config.global = {
   mocks: {},
-  plugins: [createPinia(), VeeValidate, i18n],
+  plugins: [createPinia(), VeeValidate],
   components: {
     icon,
     deleteButton,

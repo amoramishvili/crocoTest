@@ -1,9 +1,9 @@
 <template>
-  <div class="w-full bg-white rounded-sm p-9 flex items-center">
+  <div class="w-full bg-white rounded-sm p-9 flex items-center page-header">
     <button>
       <icon name="Arrow" />
     </button>
-    <h1 class="flex font-neue-medium items-center ml-5">
+    <h1 class="flex font-neue-medium items-center ml-5 amo">
       <icon :name="activePage.icon" class="mr-3" /> <span class="pt-0.5">{{ activePage.name }}</span>
     </h1>
     <div class="flex-grow"></div>
