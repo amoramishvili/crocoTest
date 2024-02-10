@@ -1,18 +1,24 @@
 import { config } from '@vue/test-utils';
-import spaceWebComponents from 'space.web.components';
 import { createPinia } from 'pinia';
-import vHeader from '../src/components/common/header.component.vue';
+
+import icon from '../src/components/utils/icon.component.vue';
+import deleteButton from '../src/components/buttons/delete.component.vue';
+import editButton from '../src/components/buttons/edit.component.vue';
+import addButton from '../src/components/buttons/add.component.vue';
+import textInput from '../src/components/inputs/text.component.vue';
+import fileInput from '../src/components/inputs/file.component.vue';
+
 import VeeValidate from '../src/validators/index';
-import i18n from '../src/locales';
-import { numberFormat as numberFormatMock } from '../src/utils/numbers.utli';
 
 config.global = {
-  mocks: {
-    $t: (msg, obj) => i18n.global.t(msg, obj),
-    numberFormatMock: (msg) => numberFormatMock(msg),
-  },
-  plugins: [createPinia(), VeeValidate, i18n, spaceWebComponents],
+  mocks: {},
+  plugins: [createPinia(), VeeValidate, i18n],
   components: {
-    VHeader: vHeader,
+    icon,
+    deleteButton,
+    editButton,
+    addButton,
+    textInput,
+    fileInput,
   },
 };

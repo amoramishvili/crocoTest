@@ -1,16 +1,16 @@
 import { defineStore } from 'pinia';
 
-export interface navigationMenuInterface {
+export interface NavigationMenuInterface {
   name: string;
   icon: string;
   routeName: string;
 }
 
-interface navigationStateInterface {
-  menu: Array<navigationMenuInterface>;
+interface NavigationStateInterface {
+  menu: Array<NavigationMenuInterface>;
 }
 export const useNavigation = defineStore('navigationStore', {
-  state: (): navigationStateInterface => {
+  state: (): NavigationStateInterface => {
     return {
       menu: [
         {

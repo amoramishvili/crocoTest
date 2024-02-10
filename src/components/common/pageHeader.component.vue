@@ -20,9 +20,9 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ComputedRef, ref, Ref, watch, PropType } from 'vue';
-import { useNavigation, navigationMenuInterface } from '../../store/navigation.store';
+import { computed, ComputedRef, defineComponent, PropType, Ref, ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
+import { NavigationMenuInterface, useNavigation } from '../../store/navigation.store';
 
 export default defineComponent({
   props: {
@@ -33,14 +33,14 @@ export default defineComponent({
     const searchValue: Ref<string> = ref('');
     const navStore = useNavigation();
     const route = useRoute();
-    const activePage: ComputedRef<navigationMenuInterface | undefined> = computed(() =>
+    const activePage: ComputedRef<NavigationMenuInterface | undefined> = computed(() =>
       navStore.getNavigation.find((e) => e.routeName === route.name)
     );
 
     watch(
       () => searchValue.value,
       (newVal: string, oldVal: string) => {
-        if ((newVal !== oldVal && newVal.length > 3) || newVal.length == 0) {
+        if ((newVal !== oldVal && newVal.length > 3) || newVal.length === 0) {
           emit('onSearch', newVal);
         }
       }

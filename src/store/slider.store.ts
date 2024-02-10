@@ -1,8 +1,8 @@
 import { defineStore } from 'pinia';
-import http from '../plugins/http.plugin';
 import { notify } from '@kyvg/vue3-notification';
+import http from '../plugins/http.plugin';
 
-export interface sliderItemsInterface {
+export interface SliderItemsInterface {
   id: number;
   image: string;
   name: string;
@@ -18,11 +18,11 @@ export interface SliderFormInterface {
   order: number;
 }
 
-interface sliderStateInterface {
+interface SliderStateInterface {
   items: Array<sliderItemsInterface>;
 }
 export const useSlider = defineStore('sliderStore', {
-  state: (): sliderStateInterface => {
+  state: (): SliderStateInterface => {
     return {
       items: [],
     };
@@ -31,14 +31,14 @@ export const useSlider = defineStore('sliderStore', {
     getSliderItems: (state) => state.items,
   },
   actions: {
-    async setSliderItems(q: string = '') {
+    async setSliderItems(q = '') {
       this.items = [];
       try {
         const { data } = await http.request({
           method: 'GET',
           url: 'slider',
           params: {
-            q: q,
+            q,
           },
         });
         this.items = data;
@@ -61,7 +61,7 @@ export const useSlider = defineStore('sliderStore', {
           text: data.mass,
         });
 
-        const selectIndex: number = this.items.findIndex((e) => e.id == id);
+        const selectIndex: number = this.items.findIndex((e) => e.id === id);
         this.items.splice(selectIndex, 1);
       } catch (error) {
         notify({

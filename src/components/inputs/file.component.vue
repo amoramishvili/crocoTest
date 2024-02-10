@@ -16,7 +16,7 @@
       !!errorMessage ? 'border-red-500  text-red-500' : 'border-gray-6 text-gray-4',
     ]"
   >
-    <span class="text-gray-4">{{ inputValue ? inputValue.name : props.placeholder }}</span>
+    <span class="text-gray-4">{{ inputValue ? inputValue['name'] : props.placeholder }}</span>
     <div class="w-10 h-10 rounded-full bg-green-1 flex items-center justify-center">
       <icon name="Gallery" class="fill-current text-white" />
     </div>
@@ -36,6 +36,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { useField } from 'vee-validate';
+
 export default defineComponent({
   props: {
     type: {

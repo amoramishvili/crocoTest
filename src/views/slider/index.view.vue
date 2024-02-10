@@ -10,13 +10,13 @@
 </template>
 
 <script lang="ts">
-import { Ref, defineComponent, onBeforeMount, ref } from 'vue';
+import { defineComponent, onBeforeMount, ref, Ref } from 'vue';
 import pageHeader from '../../components/common/pageHeader.component.vue';
 import sliderItem from '../../components/sliders/sliderItem.component.vue';
 import sliderAddItem from '../../components/sliders/sliderAddItem.component.vue';
 import sliderEditItem from '../../components/sliders/sliderEditItem.component.vue';
 
-import { sliderItemsInterface, useSlider } from '../../store/slider.store';
+import { SliderItemsInterface, useSlider } from '../../store/slider.store';
 
 export default defineComponent({
   components: {
@@ -29,7 +29,7 @@ export default defineComponent({
   setup() {
     const sliderStore = useSlider();
     const updateModalShow: Ref<boolean> = ref(false);
-    const updateModalItem: Ref<sliderItemsInterface> = ref(null);
+    const updateModalItem: Ref<SliderItemsInterface> = ref(null);
     const UpdateModal = (items): void => {
       updateModalShow.value = true;
       updateModalItem.value = items;

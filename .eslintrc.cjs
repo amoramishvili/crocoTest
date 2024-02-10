@@ -77,6 +77,5 @@ module.exports = {
         ignore: ['.svg'],
       },
     ],
-    allowEmptyReject: true,
   },
 };

@@ -40,15 +40,16 @@
 </template>
 
 <script lang="ts">
-import { PropType, Ref, computed, defineComponent, ref } from 'vue';
+import { computed, defineComponent, PropType } from 'vue';
+import { Field, Form } from 'vee-validate';
 import modal from '../utils/modal.component.vue';
-import { Form, Field, useForm } from 'vee-validate';
-import { useSlider, SliderFormInterface, sliderItemsInterface } from '../../store/slider.store';
+import { SliderFormInterface, SliderItemsInterface, useSlider } from '../../store/slider.store';
+
 export default defineComponent({
   props: {
     onClose: Function as PropType<() => void>,
     item: {
-      type: Object as PropType<sliderItemsInterface>,
+      type: Object as PropType<SliderItemsInterface>,
       default: {},
     },
   },

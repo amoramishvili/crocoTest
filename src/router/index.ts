@@ -1,10 +1,4 @@
-import {
-  createRouter as createVueRouter,
-  createWebHistory,
-  RouteLocationNormalized,
-  Router,
-  RouteRecordRaw,
-} from 'vue-router';
+import { createRouter as createVueRouter, createWebHistory, Router, RouteRecordRaw } from 'vue-router';
 import Layout from '../enums/layout.enum';
 
 const routes: Array<RouteRecordRaw> = [

@@ -1,4 +1,4 @@
-import type { AxiosInstance, Method } from 'axios';
+import type { AxiosInstance } from 'axios';
 import axios from 'axios';
 
 interface HttpOpts {

@@ -1,5 +1,5 @@
 import { configure, defineRule } from 'vee-validate';
-import { required, numeric, mimes, size } from '@vee-validate/rules';
+import { mimes, numeric, required, size } from '@vee-validate/rules';
 
 export default {
   install(): void {

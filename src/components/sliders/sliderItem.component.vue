@@ -17,15 +17,16 @@
 </template>
 
 <script lang="ts">
-import { computed, ComputedRef, defineComponent, PropType } from 'vue';
-import { sliderItemsInterface } from '../../store/slider.store';
+import { computed, defineComponent, PropType } from 'vue';
 import moment from 'moment';
+import { SliderItemsInterface } from '../../store/slider.store';
+
 export default defineComponent({
   props: {
     onDelete: Function as PropType<() => number>,
-    onUpdate: Function as PropType<() => sliderItemsInterface>,
+    onUpdate: Function as PropType<() => SliderItemsInterface>,
     item: {
-      type: Object as PropType<sliderItemsInterface>,
+      type: Object as PropType<SliderItemsInterface>,
       default: {},
     },
   },
@@ -34,7 +35,7 @@ export default defineComponent({
     const onDelete = (id: number): void => {
       emit('onDelete', id);
     };
-    const onUpdate = (item: sliderItemsInterface): void => {
+    const onUpdate = (item: SliderItemsInterface): void => {
       emit('onUpdate', item);
     };
 

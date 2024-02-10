@@ -2,6 +2,7 @@ import { createApp } from 'vue';
 import type { App as Application } from 'vue';
 import { Router } from 'vue-router';
 import { Pinia } from 'pinia';
+import Notifications from '@kyvg/vue3-notification';
 import VeeValidate from './validators/index';
 import App from './layouts/app.layout.vue';
 import createRouter from './router';
@@ -12,8 +13,6 @@ import editButton from './components/buttons/edit.component.vue';
 import addButton from './components/buttons/add.component.vue';
 import textInput from './components/inputs/text.component.vue';
 import fileInput from './components/inputs/file.component.vue';
-
-import Notifications from '@kyvg/vue3-notification';
 
 const createMyApp = async (): Promise<{
   app: Application<Element>;

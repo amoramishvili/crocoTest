@@ -31,10 +31,11 @@
 </template>
 
 <script lang="ts">
-import { Ref, defineComponent, ref } from 'vue';
+import { defineComponent, ref, Ref } from 'vue';
+import { Field, Form } from 'vee-validate';
 import modal from '../utils/modal.component.vue';
-import { Form, Field, useForm } from 'vee-validate';
-import { useSlider, SliderFormInterface } from '../../store/slider.store';
+import { SliderFormInterface, useSlider } from '../../store/slider.store';
+
 export default defineComponent({
   components: {
     modal,

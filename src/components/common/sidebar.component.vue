@@ -60,10 +60,10 @@
 </template>
 
 <script lang="ts">
-import { Ref, defineComponent } from 'vue';
+import { defineComponent } from 'vue';
+import { useRoute } from 'vue-router';
 import Logo from '../../assets/icons/logo.svg?component';
 import { useNavigation } from '../../store/navigation.store';
-import { useRoute } from 'vue-router';
 
 export default defineComponent({
   components: {

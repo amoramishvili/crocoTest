@@ -1,7 +1,6 @@
 import './assets/scss/app.scss';
 
 import createMyApp from './app';
-import { useAuth } from './store/auth.store';
 import http from './plugins/http.plugin';
 
 const myApp = createMyApp();
