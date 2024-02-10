@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'NeueCrocoSansMedium';
+  src: url('/fonts/NeueCrocoSansMedium.woff') format('woff');
+}
+.font-neue-medium {
+  font-family: 'NeueCrocoSansMedium';
+}
+
+@font-face {
+  font-family: 'NeueCrocoSansRegular';
+  src: url('/fonts/NeueCrocoSansRegular.woff2') format('woff2');
+}
+
+.font-neue-Regular {
+  font-family: 'NeueCrocoSansRegular';
+}
